@@ -1,0 +1,175 @@
+body {
+  color: #454545 !important;
+}
+
+textarea.form-control {
+  height: 114px !important;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.comment-field {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.enter-lead-page {
+  background-image: url( '/assets/img/background.jpg' );
+  background-size: 100% auto; 
+  background-repeat: no-repeat; 
+  background-position: top;
+}
+#notice-area {
+  opacity: 0;
+  margin: 5rem 35%;
+  position: absolute; 
+  width: 30%; 
+  text-align: center;
+  background: rgba( 222, 246, 207, 0.9);
+  z-index: 1;
+  border-radius: 0.5rem;
+  transition: opacity 0.6s ease-in-out 0.6s;
+}
+
+#js-form-response {
+  margin: 2rem 4rem;
+}
+
+
+
+.city-area {
+  background: rgba( 230,230,230, 0.8);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.city-info {
+  min-height: 38px;
+  margin: 6px 0 7px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.lead-warning {
+  float: left;
+  height: 65px;
+  color: orange
+}
+
+.lead-warning-2 {
+  float: left;
+  height: 65px;
+  color: red
+}
+
+.new-lead-input {
+  height:50px !important;
+  font-weight:bold !important;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cacaca;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #0a0a0a;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10,10,10,0.1);
+  border-radius: 5px;
+  transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.enter-lead-page {
+  display:flex;
+  min-height:100vh;
+  flex-direction:column
+}
+
+#potential-lead-site {
+  flex:1
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.btn-ryno{
+  color: #fff !important;
+  background-color: rgba(244, 125, 36, 1) !important;
+  border-color: rgba(244, 125, 36, 1) !important;
+}
+
+.btn-ryno:hover {
+  color: #fff !important;
+  background-color: rgba(244, 125, 36, 0.8) !important;
+  border-color: rgba(244, 125, 36, 0.8) !important;
+}
+
+select,
+textarea::placeholder,
+input::placeholder {
+  color: #cacaca;
+  font-weight: bold;
+}
+
+.logo {
+  width: 500px;
+}
+
+.logo-sm {
+  width: 300px;
+  padding: 0 2rem 2rem;
+}
+
+.second-logo {
+  padding: 0 2rem;
+  width: 500px;
+}
+
+.email-error-message,
+.website-error-message,
+.error-message {
+  opacity: 0;
+  font-size: 1rem;
+  color:#ee0000;
+  height: 1rem;
+  top: 14px;
+  position: absolute;
+  font-weight: bold;
+  right: 1rem;
+}
+
+#spinner {
+  display: none;
+  transition: display 0.5s ease-in-out 0.5s;
+}
+
+@media screen and (max-width: 40em) {
+  .logo {
+    width: 100%;   
+  }
+  .second-logo {
+    padding: 0 2rem;
+    width: 100%;   
+  }
+
+  #notice-area {
+    margin: 5rem 10%;
+    position: fixed;
+    width: 80%;
+  }
+  #js-form-response {
+    margin: 1rem 2rem;
+  }
+}
