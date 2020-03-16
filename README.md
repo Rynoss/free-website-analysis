@@ -6,11 +6,11 @@ Site used by billing to pull in potential leads for RYNOss.
 
 
 ### Deployment Commands
-Deploy Serverless Configuration: sls deploy -s dev (or prod)
-Deploy Static Site Elements: npm run deploy -s dev (or prod)
+* Deploy Serverless Configuration: sls deploy -s dev (or prod)
+* Deploy Static Site Elements: npm run deploy -s dev (or prod)
 
 
 ### Setup Serverless Enviroment
-npm install -g serverless
-Access AWS Account and create an IAM account to get access to deploy
-serverless config credentials --provider aws --key {KEY} --secret {SECRET}
+* npm install -g serverless
+* Access AWS Account and create an IAM account to get access to deploy
+* serverless config credentials --provider aws --key {KEY} --secret {SECRET}
