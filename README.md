@@ -1,6 +1,6 @@
 # Free Website Analysis Site
 ## Free Website Analysis site that billing uses at https://free.rynoss.com
-<img src="https://img.shields.io/badge/Version-1.0.0.b2-blue.svg" />
+<img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" />
 
 Site used by billing to pull in potential leads for RYNOss.
 
