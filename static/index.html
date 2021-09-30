@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RYNO FREE ORGANIC WEBSITE ANALYSIS</title>
 
@@ -34,7 +35,10 @@
 
   <body class="enter-lead-page">
     <div id="notice-area" class="col-sm-12">
-      <p id="js-form-response"></p>
+      <div id="js-form-response">
+        <h4 class="alert-heading">Thank You!</h4>
+        Thank you for your submission, we will be in touch with you shortly!
+      </div>
     </div>
 
     <div id="potential-lead-site" class="container-xl" >
@@ -50,79 +54,255 @@
 
       <div class="row">
         <div class="col-sm-12">
-          <form id="create-lead" method="post">
-            <div class="row">      
+          <form id="create-lead" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="post">
+            <input type=hidden name="oid" value="00D5w000002CivZ">
+            <input type=hidden id="retURL" name="retURL" value="">
+            
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+            <!--  these lines if you wish to test in debug mode.                          -->
+            <!--  <input type="hidden" name="debug" value=1>                              -->
+            <!--  <input type="hidden" name="debugEmail" value="rpletcher@rynoss.com">    -->
+            <!--  ----------------------------------------------------------------------  -->
+
+            <div class="row pb-3">
               <div class="col-sm-12 col-md-6">
+                
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="field">
+                      <input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name" class="new-lead-input form-control" />
+                      <div class="error-message">Required</div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="field">
+                      <input id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Last Name" class="new-lead-input form-control" />
+                      <div class="error-message">Required</div>
+                    </div>
+                  </div>
+                </div>
+                
                 <div class="field">
-                  <input id="potential_lead_name" placeholder="Your Name" class="new-lead-input form-control" type="text" name="name" />
+                  <input id="company" maxlength="40" name="company" size="20" type="text" placeholder="Company Name" class="new-lead-input form-control"  />
                   <div class="error-message">Required</div>
                 </div>
 
                 <div class="field">
-                  <input id="potential_lead_company" placeholder="Company Name" class="new-lead-input form-control" type="text" name="company" />
-                  <div class="error-message">Required</div>
-                </div>
-
-                <div class="field">
-                  <input id="potential_lead_email" placeholder="Email Address" class="new-lead-input form-control" type="text" name="email" />
+                  <input id="email" maxlength="80" name="email" size="20" type="text" placeholder="Email Address" class="new-lead-input form-control" />
                   <div class="error-message">Required</div>
                   <div class="email-error-message">Email Invalid</div>
                 </div>
 
                 <div class="field">
-                  <input id="potential_lead_phone" placeholder="Phone Number" class="new-lead-input form-control" data-mask="(999) 999-9999?x99999" type="tel" name="phone" />
+                  <input id="phone" maxlength="40" name="phone" size="20" placeholder="Phone Number" class="new-lead-input form-control" data-mask="(999) 999-9999?x99999" type="tel" />
                   <div class="error-message">Required</div>
                 </div>
 
                 <div class="field">
-                  <input id="potential_lead_website" placeholder="Website URL" class="new-lead-input form-control" type="text" name="website" />
+                  <input id="url" maxlength="80" name="url" size="20" type="text" placeholder="Website URL" class="new-lead-input form-control" />
                   <div class="error-message">Required</div>
                   <div class="website-error-message">Address Invalid</div>
+                </div>
+
+                <div class="field">
+                  <select id="industry" name="industry" class="form-control new-lead-input">
+                    <option value="">Select An Industry</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="HVAC">HVAC</option>
+                    <option value="Other">Other</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Roofing">Roofing</option>
+                  </select>
                 </div>
               </div>
 
               <div class="col-sm-12 col-md-6">
-                <div class="city-area">
-                  <div class="city-info field" >
-                    Please list the top three cities you're interested in improving your performance in, and we'll provide you with an organic website analysis.<br /><br />
-                    ENTER 3 CITIES IN YOUR AREA:
-                  </div>
-
+                <div class="city-area pt-3 pb-3">
                   <div class="field">
-                    <input id="potential_lead_cities_1" type="text" name="city1" placeholder="City 1" class='new-lead-input form-control' >
+                    <select id="state" name="state" placeholder="State" class="form-control new-lead-input" >
+                      <option value="">Select Your State</option>
+                      <optgroup label="United States">
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    
+                      <optgroup label="Canada">
+                    
+                      <option value="AB">Alberta</option>
+                      <option value="BC">British Columbia</option>
+                      <option value="MB">Manitoba</option>
+                      <option value="NB">New Brunswick</option>
+                      <option value="NL">Newfoundland and Labrador</option>
+                      <option value="NS">Nova Scotia</option>
+                      <option value="ON">Ontario</option>
+                      <option value="PE">Prince Edward Island</option>
+                      <option value="QC">Quebec</option>
+                      <option value="SK">Saskatchewan</option>
+                    </select>
+                  </div>
+                  <div class="field pb-2">
+                    <strong>Please list the top three cities you're interested in improving your performance in, and we'll provide you with an organic website analysis.</strong>
+                  </div>
+                  <div class="field">
+                    <input id="00N5w00000Rk7Je" type="text" name="00N5w00000Rk7Je" placeholder="City 1" class='new-lead-input city-field form-control' >
                     <div class="error-message">Required</div>
                   </div>
                   <div class="field">
-                    <input id="potential_lead_cities_2" type="text" name="city2" placeholder="City 2" class='new-lead-input form-control' >
+                    <input id="00N5w00000Rk7Jj" type="text" name="00N5w00000Rk7Jj" placeholder="City 2" class='new-lead-input city-field form-control' >
                     <div class="error-message">Required</div>
                   </div>
-                  <div class="field">
-                    <input id="potential_lead_cities_3" type="text" name="city3" placeholder="City 3" class='new-lead-input form-control' style=" margin-bottom: 0;" >
+                  <div class="field mb-0">
+                    <input id="00N5w00000Rk7Jo" type="text" name="00N5w00000Rk7Jo" placeholder="City 3" class='new-lead-input city-field form-control' style=" margin-bottom: 0;" >
                     <div class="error-message">Required</div>
                   </div>
                 </div>
               </div>
             </div>
       
-            <div class="actions" style="margin-top: 10px;">
-              <button type="submit" id="submit" name="commit" class="btn btn-ryno btn-block" style="font-weight: bold; height: 50px; font-size: 18px;" data-disable-with="SUBMIT" >SUBMIT</button>
+            <div class="actions">
+              <input id='form-submit' name="submit" type="submit" class="btn btn-ryno btn-block" style="font-weight: bold; height: 50px; font-size: 18px;" value="SUBMIT">
+              <input required type=hidden name="lead_source" value="Organic Website Analysis Form">
+              <div style="display: none;">
+                <input id="00N5w00000RkeT9" name="00N5w00000RkeT9" type="checkbox" value="1" />
+
+                <input id="00N5w00000RmSSw" name="00N5w00000RmSSw" type="text" value="" />
+                <input id="00N5w00000RmST1" name="00N5w00000RmST1" type="text" value="" />
+                <input id="00N5w00000RmST6" name="00N5w00000RmST6" type="text" value="" />
+                <input id="00N5w00000RmSTB" name="00N5w00000RmSTB" type="text" value="" />
+                <input id="00N5w00000RmX4k" maxlength="100" name="00N5w00000RmX4k" size="20" type="text" />
+              </div>
             </div>
           </form>
         </div>
       </div>
     </div>
 
-  <footer>
-    <div class="footer-text">©2020 RYNO Strategic Solutions, LLC</div>
-  </footer>
+    <footer>
+      <div class="footer-text mt-3">&copy; <script>document.write(new Date().getFullYear());</script> RYNO Strategic Solutions, LLC</div>
+    </footer>
 
-  <script src="/assets/js/jquery.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="/assets/js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="/assets/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script src="/assets/js/jasny-bootstrap.min.js" ></script>
-  <script src="/assets/js/script.js" ></script>
+    <script src="/assets/js/jquery.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="/assets/js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="/assets/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/assets/js/jasny-bootstrap.min.js" ></script>
+    <script src="/assets/js/script.js" ></script>
 
-  <script src="/assets/js/fontawesome.js"></script>
+    <script src="/assets/js/fontawesome.js"></script>
 
-</body>
+    <script >
+      function getJSONP(url, success) {
+        var ud = '_' + +new Date,
+            script = document.createElement('script'),
+            head = document.getElementsByTagName('head')[0] || document.documentElement;
+
+        window[ud] = function(data) {
+          head.removeChild(script);
+          success && success(data);
+        };
+
+        script.src = url.replace('callback=?', 'callback=' + ud);
+        head.appendChild(script);
+      }
+
+      getJSONP('https://json.geoiplookup.io/?callback=?', function(data){
+        document.getElementById("00N5w00000RmSSw").value = data["ip"];
+        document.getElementById("00N5w00000RmST1").value = data["isp"];
+        document.getElementById("00N5w00000RmST6").value = data["region"];
+      });
+
+      function getTimeStamp( ) {
+        var date = new Date( new Date().getTime() );
+        var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        var hour = date.getHours() < 10 ? '0' + date.getHours() : date.getHours(); 
+        var min = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes(); 
+        var sec = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+
+        var formattedTime = months[ date.getMonth() ] + ' ' + date.getDate() + ', ' + date.getFullYear() + ' ' + hour + ':' + min + ':' + sec;
+
+        document.getElementById("00N5w00000RmSTB").value = formattedTime;
+      }
+      
+      var t = setInterval( getTimeStamp, 1000 );
+
+      var $_GET = {};
+      if(document.location.toString().indexOf('?') !== -1) {
+          var query = document.location
+                        .toString()
+                        // get the query string
+                        .replace(/^.*?\?/, '')
+                        // and remove any existing hash string (thanks, @vrijdenker)
+                        .replace(/#.*$/, '')
+                        .split('&');
+
+          for(var i=0, l=query.length; i<l; i++) {
+            var aux = decodeURIComponent(query[i]).split('=');
+            $_GET[aux[0]] = aux[1];
+          }
+      }
+      //get the 'index' query parameter
+      
+      if ( $_GET['thankyou'] == 'true' ) {
+        var element = document.getElementById("notice-area");
+        
+        element.style.opacity = "1";
+        setTimeout(() => {  element.style.opacity = "0"; }, 5000);
+      }
+
+      if ( typeof $_GET[ 'source' ] !== 'undefined' ) {
+        document.getElementById("00N5w00000RmX4k").value = $_GET[ 'source' ];
+        document.getElementById("retURL").value = "https://free.rynoss.com?thankyou=true&source=" + $_GET[ 'source' ];
+      } else {
+        document.getElementById("retURL").value = "https://free.rynoss.com?thankyou=true";
+      }
+
+    </script>
+  </body>
 </html>

@@ -58,7 +58,7 @@ resources:
                 HTTPSPort: 443
                 OriginProtocolPolicy: http-only
           DefaultCacheBehavior:
-            ViewerProtocolPolicy: allow-all
+            ViewerProtocolPolicy: redirect-to-https
             TargetOriginId: S3Origin
             AllowedMethods:
               - GET
