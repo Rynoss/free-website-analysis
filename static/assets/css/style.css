@@ -137,6 +137,24 @@ input::placeholder {
   width: 500px;
 }
 
+.error-field {
+  border: 1px solid #ee0000;
+
+}
+
+.error-field::placeholder {
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+.error-field:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: red;
+}
+
+.error-field::-ms-input-placeholder { /* Microsoft Edge */
+ color: red;
+}
+
 .email-error-message,
 .website-error-message,
 .error-message {
@@ -148,6 +166,7 @@ input::placeholder {
   position: absolute;
   font-weight: bold;
   right: 1rem;
+  transition: opacity 0.5s ease-in-out 0.5s;
 }
 
 #spinner {
