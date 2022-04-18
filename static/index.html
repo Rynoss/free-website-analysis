@@ -67,40 +67,39 @@
 
             <div class="row pb-3">
               <div class="col-sm-12 col-md-6">
-                
                 <div class="row">
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="field">
-                      <input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name" class="new-lead-input form-control" />
+                      <input id="first_name" required="required" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name*" class="new-lead-input form-control" />
                       <div class="error-message">Required</div>
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="field">
-                      <input id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Last Name" class="new-lead-input form-control" />
+                      <input id="last_name" required="required" maxlength="80" name="last_name" size="20" type="text" placeholder="Last Name*" class="new-lead-input form-control" />
                       <div class="error-message">Required</div>
                     </div>
                   </div>
                 </div>
                 
                 <div class="field">
-                  <input id="company" maxlength="40" name="company" size="20" type="text" placeholder="Company Name" class="new-lead-input form-control"  />
+                  <input id="company" required="required" maxlength="40" name="company" size="20" type="text" placeholder="Company Name*" class="new-lead-input form-control"  />
                   <div class="error-message">Required</div>
                 </div>
 
                 <div class="field">
-                  <input id="email" maxlength="80" name="email" size="20" type="text" placeholder="Email Address" class="new-lead-input form-control" />
+                  <input id="email" required="required" maxlength="80" name="email" size="20" type="text" placeholder="Email Address*" class="new-lead-input form-control" />
                   <div class="error-message">Required</div>
                   <div class="email-error-message">Email Invalid</div>
                 </div>
 
                 <div class="field">
-                  <input id="phone" maxlength="40" name="phone" size="20" placeholder="Phone Number" class="new-lead-input form-control" data-mask="(999) 999-9999?x99999" type="tel" />
+                  <input id="phone" required="required" maxlength="40" name="phone" size="20" placeholder="Phone Number*" class="new-lead-input form-control" data-mask="(999) 999-9999?x99999" type="tel" />
                   <div class="error-message">Required</div>
                 </div>
 
                 <div class="field">
-                  <input id="url" maxlength="80" name="url" size="20" type="text" placeholder="Website URL" class="new-lead-input form-control" />
+                  <input id="url" required="required" maxlength="80" name="url" size="20" type="text" placeholder="Website URL*" class="new-lead-input form-control" />
                   <div class="error-message">Required</div>
                   <div class="website-error-message">Address Invalid</div>
                 </div>
@@ -233,6 +232,7 @@
     <script src="/assets/js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="/assets/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="/assets/js/jasny-bootstrap.min.js" ></script>
+    <script src="/assets/js/sweetalert.min.js" ></script>
     <script src="/assets/js/script.js" ></script>
 
     <script src="/assets/js/fontawesome.js"></script>
@@ -271,6 +271,49 @@
       }
       
       var t = setInterval( getTimeStamp, 1000 );
+
+      $('#create-lead').submit(function() {   
+        var submit_form = true;
+        $(this).find(':input[type=submit]').prop('disabled', true);
+        $( '.error-message' ).css('opacity', '0');
+        
+        if ( $.trim($("#first_name").val()) === "" ) {
+          submit_form = false;
+          $( "#first_name" ).closest( 'div' ).find( '.error-message' ).css('opacity', '1');
+        }
+        
+        if ( $.trim($("#last_name").val()) === "" ) {
+          submit_form = false;
+          $( "#last_name" ).closest( 'div' ).find( '.error-message' ).css('opacity', '1');
+        }
+        if ( $.trim($("#company").val()) === "" ) {
+          submit_form = false;
+          $( "#company" ).closest( 'div' ).find( '.error-message' ).css('opacity', '1');
+        }
+        if ( $.trim($("#email").val()) === "" ) {
+          submit_form = false;
+          $( "#email" ).closest( 'div' ).find( '.error-message' ).css('opacity', '1');
+        }
+        if ( $.trim($("#phone").val()) === "" ) {
+          submit_form = false;
+          $( "#phone" ).closest( 'div' ).find( '.error-message' ).css('opacity', '1');
+        }
+        if ( $.trim($("#url").val()) === "" ) {
+          submit_form = false;
+          $( "#url" ).closest( 'div' ).find( '.error-message' ).css('opacity', '1');
+        }
+        
+        if ( submit_form === false ) {
+          alert('Required fields empty. Please complete all required form fields.');
+          $(this).find(':input[type=submit]').prop('disabled', false);
+          return false;
+        }
+      });
+
+      $( '.form-control' ).keypress(function() {
+        $(this).closest( 'div' ).find( '.error-message' ).css('opacity', '0');
+      });
+
 
       var $_GET = {};
       if(document.location.toString().indexOf('?') !== -1) {
