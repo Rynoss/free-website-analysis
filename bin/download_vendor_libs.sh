@@ -17,8 +17,7 @@ curl -s https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js -o 
 curl -s https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js.map -o static/assets/js/popper.min.js.map
 curl -s https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js -o static/assets/js/bootstrap.min.js
 curl -s https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js.map -o static/assets/js/bootstrap.min.js.map
-
-
+curl -s https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js -o static/assets/js/sweetalert.min.js
 
 curl -s https://use.fontawesome.com/1e01bfd490.js -o static/assets/js/fontawesome.js
 
