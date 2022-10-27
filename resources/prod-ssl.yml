@@ -1,4 +1,0 @@
-Type: "AWS::CertificateManager::Certificate"
-Properties:
-  DomainName: "${self:custom.rootDomain}"
-  ValidationMethod: "DNS"

@@ -1,5 +1,0 @@
----
-WebSiteUrl:
-  Value: {"Fn::GetAtt": [WebSite, WebsiteURL]}
-WebSiteBucket:
-  Value: {Ref: WebSite}
